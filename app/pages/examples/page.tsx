@@ -1,6 +1,5 @@
 import React, { Children } from 'react'
-import ExamplesLayout from './layout'
-import Example1 from './1/page'
+
 const ExamplesHome = () => {
 return (
 <div>

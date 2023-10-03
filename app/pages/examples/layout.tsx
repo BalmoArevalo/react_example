@@ -19,6 +19,11 @@ const ExamplesLayout = ({children}:IExampleLayoutProps) =>{
                         Ejemplo 1: Renderizar lista de objetos
                     </div>
                 </Link>
+                <Link href="/pages/examples/2">
+                    <div className='p-2 hover:bg-blue-400 hover:text-white bordder-b border-gray-300'>
+                        Ejemplo 2: Capturar datos y almacenar en estado                   
+                    </div>
+                </Link>
             </div>
             <div className='flex-1 border-gray-300 rounded-md p-2'>
                 {children}
