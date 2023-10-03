@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import React, { HTMLAttributes } from 'react'
 
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+    title: 'Ejemplo 1: Renderizar lista de objetos',
+}
+
 interface IUsuario {
     id: number;
     firstName: string;
