@@ -11,3 +11,18 @@
         @apply bg-blue-500 px-2 py-1 rounded-md text-white;
     }
 }
+h1 {
+    font-size: -2xl;
+}
+h2{
+    font-size: xl;
+}
+h3{
+    font-size: lg;
+}
+h4{
+    font-size: base;
+}
+h5{
+    font-size: sem
+}
