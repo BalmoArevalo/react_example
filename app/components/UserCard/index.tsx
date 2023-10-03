@@ -9,7 +9,7 @@ export interface IUsuario {
     role: 'Admin' | 'Client';
 }
 
-interface UserCardProps{
+export interface UserCardProps{
   user: IUsuario;
 }
 
