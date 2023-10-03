@@ -33,6 +33,11 @@ const ExamplesLayout = ({children}:IExampleLayoutProps) =>{
                         Ejemplo 3: Renderizar lista de un estado y manipular el estado                   
                     </div>
                 </Link>
+                <Link href={LinkRoutes.AO22002}>
+                    <div className='p-2 hover:bg-blue-400 hover:text-white bordder-b border-gray-300'>
+                        Ejemplo 4: AO22002                
+                    </div>
+                </Link>
             </div>
             <div className='flex-1 border-gray-300 rounded-md p-2'>
                 {children}
