@@ -1,12 +1,14 @@
 'use client';
+import Image from "next/image";
 import React, { ChangeEvent, useState }  from "react";
-import { UserCardProps } from "@/app/components/UserCard";
+import { IUsuario } from "@/app/components/UserCard";
 type TRoles = 'Client'|'Admin';
 
-interface IUser extends UserCardProps {
+interface IUser extends IUsuario {
     id: number;
-    picture: string;
-  }
+    role: TRoles;
+    terms: boolean;
+}
 
 const Example2 = ()=>{
     const [users, setUsers] = useState<IUser[]>([]);
@@ -47,7 +49,27 @@ const Example2 = ()=>{
         console.log('Rol:', role)
         console.log(terms ? 'Acepto los terminos' : 'No acepto los terminos')
         console.log('--------------')
+        
+        // Agregar el nuevo usuario al estado users
+        const newUser: IUser = {
+            // id: cards[cards.length - 1].id + 1,
+            id: users.length + 1, // Genera un nuevo ID para el usuario
+            firstName: firstName,
+            lastName: lastName,
+            picture: picture,
+            role: role,
+            terms: terms,
+        };
+        
+        setUsers(prevUsers => [...prevUsers, newUser]);
+        // Limpiar los campos de entrada
+        setFirstName('');
+        setLastName('');
+        setPicture('');
+        setRole('Client');
+        setTerms(false);
     }
+    
     return (
         <div>
             <div className="flex flex-col">
@@ -74,6 +96,16 @@ const Example2 = ()=>{
                 <input id="terms" type="checkbox" onChange={handleTermsOnChange}/>
             </div>
             <button onClick={handleGuardarOnClick}>Guardar</button>
+
+            {/* Renderizar la lista de usuarios */}
+            {users.map(user => (
+                <div key={user.id} className="border border-2 border-gray-500 rounded-md mg-5">
+                    <h2>{user.firstName} {user.lastName}</h2>
+                    <Image src={user.picture} width={128} height={128} alt={`${user.firstName}'s picture`} />
+                    <p>Rol: {user.role}</p>
+                    <p>{user.terms ? 'Aceptó los términos y servicios' : 'No aceptó los términos y servicios'}</p>
+                </div>
+            ))}
         </div>
     )
 }
