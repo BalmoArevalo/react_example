@@ -9,13 +9,9 @@ export interface IUsuario {
     role: 'Admin' | 'Client';
 }
 
-export interface UserCardProps{
-  user: IUsuario;
-}
-
-const UserCard: React.FC<UserCardProps> = ({ user }) => {
+const UserCard: React.FC<{ user: IUsuario }> = ({ user }) => {
   return (
-    <div key={user.id} className='flex flex-row gap-4 border border-gray-300 rounded-lg overflow-hidden w-96'>
+    <div className='flex flex-row gap-4 border border-gray-300 rounded-lg overflow-hidden w-96'>
       <div className='aspect-square w-32'>
         <Image width={128} height={128} className='object-cover w-full h-full' src={user.picture} alt={`User photo of ${user.firstName} ${user.lastName}`} />
       </div>
