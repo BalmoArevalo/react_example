@@ -99,7 +99,7 @@ const Example2 = ()=>{
 
             {/* Renderizar la lista de usuarios */}
             {users.map(user => (
-                <div key={user.id} className="border border-2 border-gray-500 rounded-md mg-5">
+                <div key={user.id} className="border-2 border-gray-500 rounded-md mg-5">
                     <h2>{user.firstName} {user.lastName}</h2>
                     <Image src={user.picture} width={128} height={128} alt={`${user.firstName}'s picture`} />
                     <p>Rol: {user.role}</p>
