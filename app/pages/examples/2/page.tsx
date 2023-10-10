@@ -101,7 +101,7 @@ const Example2 = ()=>{
             {users.map(user => (
                 <div key={user.id} className="border-2 border-gray-500 rounded-md mg-5">
                     <h2>{user.firstName} {user.lastName}</h2>
-                    <Image src={user.picture} width={128} height={128} alt={`${user.firstName}'s picture`} />
+                    <Image src={user.picture} width={128} height={128} alt={`${user.firstName}`} />
                     <p>Rol: {user.role}</p>
                     <p>{user.terms ? 'Aceptó los términos y servicios' : 'No aceptó los términos y servicios'}</p>
                 </div>
