@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
 import React, { ChangeEvent, useState }  from "react";
-import { IUsuario } from "@/app/components/UserCard";
+import { IUsuario } from "@/components/UserCard";
 type TRoles = 'Client'|'Admin';
 
 interface IUser extends IUsuario {

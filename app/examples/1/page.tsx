@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react'
-import UserCard from '@/app/components/UserCard';
-import { IUsuario } from '@/app/components/UserCard';
+import UserCard from '@/components/UserCard';
+import { IUsuario } from '@/components/UserCard';
 
 
 import { Metadata } from 'next'

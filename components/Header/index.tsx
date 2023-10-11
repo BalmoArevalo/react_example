@@ -6,7 +6,7 @@ return (
         <Link href={'/'} className='text-xl font-bold'>React example</Link>
         <div className='flex flex-row gap-4'>
             <Link href={'/'}>Inicio</Link>
-            <Link href={'/pages/examples'}>Ejemplos</Link>
+            <Link href={'/examples'}>Ejemplos</Link>
         </div>   
     </div>
 )
